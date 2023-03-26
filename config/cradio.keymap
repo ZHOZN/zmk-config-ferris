@@ -10,7 +10,7 @@
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 &lt {
-    flavor = "hold-preferred";
+    flavor = "tap-unless-interrupted";
     quick-tap-ms = <150>;
 };
 
@@ -20,7 +20,7 @@
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-unless-interrupted";
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
             global-quick-tap;
