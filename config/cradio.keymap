@@ -58,14 +58,14 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  7       │  8       │  9       │ PRINT    │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
-            &kp INS    &kp N7     &kp N8     &kp N9     &kp PSCRN      &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //│ INSERT   │  1       │  2       │  3       │ PRINT    │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
+            &kp INS    &kp N1     &kp N2     &kp N3     &kp PSCRN      &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │  4       │  5       │  6       │ REPEAT   │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
             &kp DEL    &kp N4     &kp N5     &kp N6    &key_repeat     &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  1       │  2       │  3       │  0       │   │PLAY PAUSE│ VOL UP   │ VOL DOWN │          │          │
-           &caps_word  &kp N1     &kp N2     &kp N3     &kp N0        &kp K_PP &kp K_VOL_UP &kp K_VOL_DN &trans     &trans
+        //│ CAPS     │  7       │  8       │  9       │  0       │   │PLAY PAUSE│ VOL DOWN │  VOL UP  │ PREVIOUS │  NEXT    │
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0        &kp K_PP &kp K_VOL_DN &kp K_VOL_UP &kp K_PREV &kp K_NEXT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -92,11 +92,11 @@
         tri_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-            &reset     &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans      &reset
+        //│ RESET    │  F1      │  F2      │  F3      │PROFILE 0 │   │          │  F7      │  F8      │  F9      │  RESET   │
+            &reset     &kp F1     &kp F2     &kp F3    &bt BT_SEL 0    &trans     &kp F7     &kp F8     &kp F9      &reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+        //│BOOTLOADER│  F4      │  F5      │  F6      │PROFILE 1 │   │          │  F10     │  F11     │  F12     │BOOTLOADER│
+          &bootloader  &kp F4     &kp F5     &kp F6    &bt BT_SEL 1    &trans     &kp F10    &kp F11    &kp F12   &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
