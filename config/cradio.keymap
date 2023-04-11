@@ -93,7 +93,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │  F1      │  F2      │  F3      │PROFILE 0 │   │          │  F7      │  F8      │  F9      │  RESET   │
-            &reset     &kp F1     &kp F2     &kp F3    &bt BT_SEL 0    &trans     &kp F7     &kp F8     &kp F9      &reset
+            &sys_reset &kp F1     &kp F2     &kp F3    &bt BT_SEL 0    &trans     &kp F7     &kp F8     &kp F9    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│  F4      │  F5      │  F6      │PROFILE 1 │   │          │  F10     │  F11     │  F12     │BOOTLOADER│
           &bootloader  &kp F4     &kp F5     &kp F6    &bt BT_SEL 1    &trans     &kp F10    &kp F11    &kp F12   &bootloader
