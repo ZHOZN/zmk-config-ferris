@@ -55,17 +55,11 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp RGUI &kp GRAVE &kp A>;
         };
-        grave_u: grave_a {
+        grave_u: grave_u {
             label = "accent_grave_u";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp RGUI &kp GRAVE &kp U>;
-        };
-        cedilla_c: cedilla_c {
-            label = "accent_cedilla_c";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp RGUI &kp GRAVE &kp A>;
         };
         cedilla_c: cedilla_c {
             label = "accent_cedilla_c";
