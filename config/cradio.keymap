@@ -65,7 +65,7 @@
             label = "accent_cedilla_c";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp RGUI &kp GRAVE &kp A>;
+            bindings = <&macro_tap &kp RGUI &kp COMMA &kp C>;
         };
         circumflex: circumflex {
             label = "circumflex";
