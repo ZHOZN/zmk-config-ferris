@@ -69,21 +69,23 @@
     };
 
     macros {
-        ctrl_pgdn: ctrl_pgdn {
+        c_tab: c_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp PG_DN>
+                , <&macro_tap &kp TAB>
                 , <&macro_release &kp LCTRL>
                 ;
         };
-        ctrl_pgup: ctrl_pgup {
+        cs_tab: cs_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp PG_UP>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LSHFT>
                 , <&macro_release &kp LCTRL>
                 ;
         };
@@ -128,7 +130,7 @@
         //│          │          │          │          │          │   │ 1        │ 2        │  3       │  0       │          │
             &trans     &trans     &trans     &trans     &trans         &kp N1     &kp N2     &kp N3     &kp N0     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &kp DEL     &trans
+                                             &trans     &trans         &kp DEL    &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -142,10 +144,10 @@
         //│          │  [       │  ]       │  ~       │  #       │   │ LEFT     │ DOWN     │  UP      │  RIGHT   │  PEVIOUS │
             &trans     &kp LBKT   &kp RBKT   &kp TILDE  &kp HASH       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp K_PREV
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  `       │  {       │  }       │  \       │  |       │   │          │ VOL DOWN │  VOL UP  │          │  NEXT    │
-            &kp GRAVE  &kp LBRC   &kp RBRC   &kp BSLH   &kp PIPE     &ctrl_pgdn &kp K_VOL_DN &kp K_VOL_UP &ctrl_pgup &kp K_NEXT
+        //│  `       │  {       │  }       │  \       │  |       │   │ VOL DOWN │          │          │ VOL UP   │  NEXT    │
+            &kp GRAVE  &kp LBRC   &kp RBRC   &kp BSLH   &kp PIPE     &kp K_VOL_DN &c_tab     &cs_tab  &kp K_VOL_UP &kp K_NEXT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp RGUI       &trans      &trans
+                                             &trans     &kp RGUI       &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
