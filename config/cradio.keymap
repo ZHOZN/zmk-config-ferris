@@ -48,17 +48,17 @@ combos {
     };
     combo_minus {
         timeout-ms = <50>;
-        key-positions = <1 2>;
+        key-positions = <6 7>;
         bindings = <&kp MINUS>;
     };
     combo_under {
         timeout-ms = <50>;
-        key-positions = <6 7>;
+        key-positions = <5 6 7>;
         bindings = <&kp UNDER>;
     };
     combo_equal {
         timeout-ms = <50>;
-        key-positions = <5 6 7>;
+        key-positions = <1 2>;
         bindings = <&kp EQUAL>;
     };
     combo_slash {
